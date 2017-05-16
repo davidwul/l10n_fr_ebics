@@ -130,8 +130,8 @@ class ebics_config(models.Model):
     user_id = fields.Char(required=True) #should be a many2one
 
     ebics_profile = fields.Selection([('t', 'EBICS T'), ('ts', 'EBICS TS')])
-    ebics_country = fields.Selection([('fr', 'France')])
-    ebics_version = fields.Selection([('h003', 'H003')])
+    ebics_country = fields.Selection([('fr', 'France'),('ch','Suisse')])
+    ebics_version = fields.Selection([('h003', 'H003'),('h004', 'H004')])
     ebics_revision = fields.Selection([('1', '1')])
     ebics_specification = fields.Selection([('25', 'v2.5')])
 
